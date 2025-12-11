@@ -27,6 +27,7 @@ aspect-ratio: 15/2;
 
 .layout {
 display: flex;
+height: 100vh;
 }
 
 .sidebar {
@@ -111,4 +112,15 @@ border-radius: 6px;
 
 .accordion-content.open {
     max-height: 2000px; /* suficientemente grande */
+}
+
+.pie {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ff6f61;
+  height: 90px;
+  padding: 20px;
+  text-align: center;
 }
