@@ -92,3 +92,23 @@ width: 300px;
 height: 300px;
 border-radius: 6px;
 }
+
+.accordion-title {
+    cursor: pointer;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion-title:hover {
+    color: #ff6f61; /* o el color que uses */
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.accordion-content.open {
+    max-height: 2000px; /* suficientemente grande */
+}
