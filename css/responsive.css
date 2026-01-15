@@ -1,14 +1,18 @@
 /* TABLET */
 @media (max-width: 1024px) {
-  .sidebar {
-    width: 180px;
+  .page-grid {
+    grid-template-columns: 180px 1fr;
   }
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
-  .layout {
-    flex-direction: column;
+
+  .page-grid {
+    display: block;
+  }
+  #site-nav {
+    order: 1;
   }
 
   .sidebar {
@@ -18,8 +22,12 @@
     justify-content: center;
   }
 
-  .nav-link {
+  .sidebar a {
     flex: 1 1 45%;
     text-align: center;
+  }
+
+  main {
+    padding: 15px;
   }
 }
