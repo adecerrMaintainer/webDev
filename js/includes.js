@@ -15,16 +15,23 @@ function initMenu() {
   const sidebar = document.getElementById("sidebar");
   const overlay = document.getElementById("overlay");
 
-  if (!toggle) return;
+  if (!toggle || !sidebar) return;
 
   toggle.addEventListener("click", () => {
     sidebar.classList.toggle("active");
-    overlay.classList.toggle("active");
+    overlay?.classList.toggle("active");
   });
 
-  overlay.addEventListener("click", () => {
+  overlay?.addEventListener("click", () => {
     sidebar.classList.remove("active");
     overlay.classList.remove("active");
+  });
+
+  document.querySelectorAll("#sidebar a").forEach(link => {
+    link.addEventListener("click", () => {
+      sidebar.classList.remove("active");
+      overlay?.classList.remove("active");
+    });
   });
 }
 
