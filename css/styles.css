@@ -68,9 +68,6 @@ body {
 }
 
 /* NAV */
-#site-nav {
-  grid-row: 2 / 4;
-}
 
 .sidebar {
   position: fixed;
