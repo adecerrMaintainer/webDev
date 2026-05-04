@@ -9,25 +9,44 @@
 @media (max-width: 768px) {
 
   .page-grid {
-    display: block;
-  }
-  #site-nav {
-    order: 1;
-  }
-
-  .sidebar {
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .sidebar a {
-    flex: 1 1 45%;
-    text-align: center;
+    grid-template-columns: 1fr;
   }
 
   main {
+    grid-column: 1;
     padding: 15px;
+  }
+
+  /* BOTÓN HAMBURGUESA */
+  .menu-toggle {
+    display: block;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1001;
+    font-size: 26px;
+    background: #474747;
+    color: white;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -240px;
+    width: 220px;
+    height: 100%;
+    z-index: 1000;
+
+    flex-direction: column;
+
+    transition: left 0.3s ease;
+  }
+
+  .sidebar.active {
+    left: 0;
   }
 }

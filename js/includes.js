@@ -6,6 +6,26 @@ async function loadPartials() {
   document.getElementById('site-header').innerHTML = header;
   document.getElementById('site-nav').innerHTML = nav;
   document.getElementById('site-footer').innerHTML = footer;
+
+  initMenu();
+}
+
+function initMenu() {
+  const toggle = document.getElementById("menu-toggle");
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("overlay");
+
+  if (!toggle) return;
+
+  toggle.addEventListener("click", () => {
+    sidebar.classList.toggle("active");
+    overlay.classList.toggle("active");
+  });
+
+  overlay.addEventListener("click", () => {
+    sidebar.classList.remove("active");
+    overlay.classList.remove("active");
+  });
 }
 
 loadPartials();
