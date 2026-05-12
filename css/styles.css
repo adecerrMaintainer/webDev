@@ -8,8 +8,9 @@
 /* BASE */
 body {
   font-family: "Poppins", sans-serif;
-  background: #f5f5f5;
-  color: #222;
+  background: #f7f4ef;
+  color: #333;
+  line-height: 1.7;
 }
 
 /* CONTENEDOR PRINCIPAL */
@@ -27,25 +28,64 @@ body {
 
 .header-img {
   width: 100%;
-  aspect-ratio: 15 / 2;
-  background: url("../resources/design/Header.png") no-repeat center top;
-  background-size: contain;
+}
+
+.header-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* BARRA SUPERIOR */
+
+.topbar {
+  height: 72px;
+
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 24px;
+
+  border-bottom: 1px solid #ece7df;
+
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+
+  position: sticky;
+  top: 0;
+
+  z-index: 100;
+}
+
+
+.site-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #444;
 }
 
 /* Hamburguesa */
 .menu-toggle {
-  display: block;
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  z-index: 1001;
-  font-size: 26px;
-  background: #474747;
-  color: white;
+  background: #ff6f61;
   border: none;
-  padding: 10px 12px;
-  border-radius: 8px;
+
+  width: 48px;
+  height: 48px;
+
+  border-radius: 12px;
+
+  font-size: 1.5rem;
+  color: white;
+
   cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.menu-toggle:hover {
+  background: #e85d50;
 }
 
 /* Overlay */
@@ -71,48 +111,78 @@ body {
 
 .sidebar {
   position: fixed;
+
   top: 0;
-  left: -240px; /* oculto */
-  width: 220px;
-  height: 100%;
-  background: #474747;
-  padding: 20px;
+  left: -260px;
+
+  width: 240px;
+  height: 100vh;
+
+  background: #3f3f3f;
+
+  padding: 90px 20px 20px;
+
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
+
   z-index: 1000;
+
   transition: left 0.3s ease;
+
+  box-shadow: 4px 0 20px rgba(0,0,0,0.2);
 }
 
 .sidebar.active {
   left: 0;
 }
+
 .sidebar a {
-  background: #979797;
-  color: white;
+  background: rgba(255,255,255,0.08);
+
+  color: #f5f5f5;
+
   text-decoration: none;
-  padding: 12px;
-  border-radius: 8px;
-  transition: 0.2s;
+
+  padding: 14px 16px;
+
+  border-radius: 12px;
+
+  transition: 0.25s;
+
+  font-weight: 500;
+
+  backdrop-filter: blur(4px);
 }
 
 .sidebar a:hover,
 .sidebar a.active {
   background: #ff6f61;
+  transform: translateX(4px);
 }
 
 /* MAIN */
 main {
-  grid-column: 2;
-  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 70px 24px;
 }
 
 h1 {
-  margin-bottom: 15px;
+  font-size: 2.6rem;
+  color: #2f2f2f;
+  margin-bottom: 25px;
 }
 
 h2 {
-  margin: 25px 0 10px;
+  font-size: 1.5rem;
+  color: #ff6f61;
+  margin-bottom: 18px;
+}
+
+p {
+  font-size: 1.05rem;
+  color: #4d4d4d;
 }
 
 /* GRID CONTENIDO */
@@ -157,8 +227,13 @@ img {
 }
 
 .pie {
-  background: #ff6f61;
-  color: white;
-  padding: 20px;
+  background: #3f3f3f;
+
+  color: #f5f5f5;
+
+  padding: 40px 20px;
+
   text-align: center;
+
+  margin-top: 80px;
 }

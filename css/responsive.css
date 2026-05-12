@@ -8,45 +8,20 @@
 /* MOBILE */
 @media (max-width: 768px) {
 
-  .page-grid {
-    grid-template-columns: 1fr;
+  .topbar {
+    padding: 0 16px;
   }
 
   main {
-    grid-column: 1;
-    padding: 15px;
+    padding: 40px 18px;
   }
 
-  /* BOTÓN HAMBURGUESA */
-  .menu-toggle {
-    display: block;
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    z-index: 1001;
-    font-size: 26px;
-    background: #474747;
-    color: white;
-    border: none;
-    padding: 10px 12px;
-    border-radius: 8px;
-    cursor: pointer;
+  h1 {
+    font-size: 2rem;
   }
 
   .sidebar {
-    position: fixed;
-    top: 0;
-    left: -240px;
     width: 220px;
-    height: 100%;
-    z-index: 1000;
-
-    flex-direction: column;
-
-    transition: left 0.3s ease;
   }
 
-  .sidebar.active {
-    left: 0;
-  }
 }
