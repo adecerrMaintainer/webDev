@@ -325,6 +325,10 @@ p {
   color: #ff6f61;
 }
 
+.contacto-card-dark p {
+  color: #000000;
+}
+
 /* GRID CONTENIDO */
 .contenedor-grid {
   display: grid;
