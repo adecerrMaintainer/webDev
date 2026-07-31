@@ -24,4 +24,13 @@
     width: 220px;
   }
 
+  .servicios-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .servicios-texto {
+    max-height: none;
+    overflow-y: visible;
+  }
+
 }
